@@ -86,3 +86,9 @@ Download XML
 ### 4️⃣ Execute o programa
 python detector_face.py
 
+### NOTA ETICA SOBRE RECONHECIMENTO FACIAL
+
+Este projeto foi desenvolvido apenas para fins *acadêmicos*.
+Os dados faciais não são armazenados, compartilhados ou usados para identificar pessoas reais.
+O uso responsável de tecnologias de visão computacional é fundamental para proteger a privacidade e os direitos individuais.
+
