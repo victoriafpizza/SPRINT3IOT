@@ -25,4 +25,26 @@ while True:
     ret, frame = cap.read()
     if not ret: break
 
-    gr
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    sf = max(1.01, cv2.getTrackbarPos('scale x100', 'FaceDetect') / 100.0)
+    mn = max(1, cv2.getTrackbarPos('minNeighbors', 'FaceDetect'))
+    ms = max(20, cv2.getTrackbarPos('minSize', 'FaceDetect'))
+
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=sf, minNeighbors=mn, minSize=(ms, ms))
+
+    for (x, y, w0, h0) in faces:
+        cv2.rectangle(frame, (x, y), (x + w0, y + h0), (0, 0, 255), 2)
+        cv2.putText(frame, "Rosto Detectado", (x, y - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, cv2.LINE_AA)
+
+    cv2.putText(frame, f'scale={sf:.2f}  neighbors={mn}  minSize={ms}px',
+                (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
+
+    cv2.imshow('FaceDetect', frame)
+    out.write(frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release(); out.release(); cv2.destroyAllWindows()
