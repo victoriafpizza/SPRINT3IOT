@@ -2,9 +2,11 @@
 
 
 <p align="center">
+  
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
 </p>
 
 <p align="center">
@@ -94,5 +96,6 @@ python detector_face.py
 Este projeto foi desenvolvido apenas para fins *acadêmicos*.
 Os dados faciais não são armazenados, compartilhados ou usados para identificar pessoas reais.
 O uso responsável de tecnologias de visão computacional é fundamental para proteger a privacidade e os direitos individuais.
+
 
 
