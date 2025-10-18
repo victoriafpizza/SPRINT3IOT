@@ -95,3 +95,4 @@ O uso responsável de tecnologias de visão computacional é fundamental para pr
 
 
 
+
